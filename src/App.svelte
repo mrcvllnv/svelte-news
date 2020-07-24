@@ -6,7 +6,7 @@
 	let articles;
 
 	async function fetchHeadlines() {
-		data = await fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=50&apiKey=232713e853bc4208942d8fb7b7017174`)
+		data = await fetch(`https://newsapi.org/v2/top-headlines?country=ph&pageSize=50&apiKey=3d481d81a7414a969590652ec8fc6f17`)
 		.then(res => res.json());
 
 		articles = data.articles;
@@ -31,7 +31,7 @@
 <div class="font-sans bg-gray-100">
 	<div class="py-8">
 		<div class="container max-w-4xl my-0 mx-auto px-4 py-8 lg:my-12 md:px-8 md:my-2">
-			<div class="text-indigo-600 text-4xl font-bold">Top headlines <span class="text-gray-600 text-2xl"> in US</span></div>
+			<div class="text-indigo-600 text-4xl font-bold">Top headlines <span class="text-gray-600 text-2xl"> in PH</span></div>
 			<div class="flex flex-wrap -mx-1 lg:-mx-4">
 				{#if articles}
 				{#each articles as article}
